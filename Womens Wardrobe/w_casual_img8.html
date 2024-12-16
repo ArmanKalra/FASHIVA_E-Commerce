@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Product Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Additional styling for the images */
+        .small-images img {
+            cursor: pointer;
+            border: 1px solid #ddd;
+            padding: 5px;
+            width: 70px; /* to make small size smaller */
+            height: auto;
+            transition: 0.3s;
+            margin-bottom: 10px; 
+            /* for adding space */
+        }
+        .small-images img:hover {
+            border: 2px solid #000;
+        }
+        .large-image img {
+            width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+        /* Styling for the text section */
+        .product-details {
+            padding-left: 15px; /* Reduce space between image and text */
+        }
+        .product-details h2 {
+            font-size: 20px; 
+            margin-bottom: 10px;
+        }
+        .product-details p {
+            font-size: 14px; 
+            margin-bottom: 10px;
+        }
+        .price {
+            font-size: 18px; 
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-4">
+    <div class="row">
+        <!-- Small images on the left -->
+        <div class="col-12 col-sm-4 col-md-2 small-images d-flex flex-column">
+            <img src="women_casual_8.1.webp" alt="Image 1" class="img-fluid" onclick="changeImage('women_casual_8.1.webp')">
+            <img src="women_casual_8.2.webp" alt="Image 2" class="img-fluid" onclick="changeImage('women_casual_8.2.webp')">
+            <img src="women_casual_8.3.webp" alt="Image 3" class="img-fluid" onclick="changeImage('women_casual_8.3.webp')">
+            <img src="women_casual_8.4.webp" alt="Image 4" class="img-fluid" onclick="changeImage('women_casual_8.4.webp')">
+        </div>
+
+        <!-- Large image on the left with product details on the right -->
+        <div class="col-12 col-sm-8 col-md-7 large-image">
+            <img id="bigImage" src="women_casual_8.1.webp" alt="Large Image" class="img-fluid">
+        </div>
+
+        <!-- Product details on the right -->
+        <div class="col-12 col-md-3 product-details">
+            <h2 class="h4">WHITE SOLID BOMBER JACKET</h2>
+            <p class="fs-5">Price: <span class="price">INR 1,060 </span> (Incl. of all taxes)</p>
+            <p>Offers:</p>
+            <ul class="fs-6">
+                <li>Get this for INR 954 - Flat 10% Off your first purchase. Code: <strong>APP10</strong></li>
+                <li>Get this for INR 848 - Flat 20% Off with minimum purchase of 150/- Code: <strong>FLAT20</strong></li>
+                <li>Get this for INR 901 - Flat 15% Off with minimum purchase of 250/- Code: <strong>FLAT15</strong></li>
+                <li>Get this for INR 869 - Flat 18% Off with minimum purchase of 300/- Code: <strong>FLAT10</strong></li>
+            </ul>
+            <p><strong>Select a Size:</strong></p>
+            <div class="d-flex">
+                <button class="btn btn-outline-dark me-2">XS</button>
+                <button class="btn btn-outline-dark me-2">S</button>
+                <button class="btn btn-outline-dark me-2">M</button>
+                <button class="btn btn-outline-dark me-2">L</button>
+                <button class="btn btn-outline-dark">XL</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    function changeImage(src) {
+        document.getElementById('bigImage').src = src;
+    }
+</script>
+
+</body>
+</html>
